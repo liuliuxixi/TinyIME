@@ -7,4 +7,7 @@ include_directories(include)
 add_executable(TinyIME
         src/main.cpp
         include/Application.h
-        src/Application.cpp)
+        src/Application.cpp
+        include/Dictionary.h
+        src/Dictionary.cpp
+)
