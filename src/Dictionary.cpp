@@ -24,10 +24,11 @@ void Dictionary::load(const std::string &filename) {
 }
 const std::vector<std::string> &Dictionary::search(const std::string &pinyin)const
 {
+    static std::vector<std::string> empty;
     auto it = m_words.find(pinyin);
 
     if (it == m_words.end()) {
-        throw std::runtime_error("pinyin is not found");
+        return empty;
     }
 
     return it -> second;

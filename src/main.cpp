@@ -4,6 +4,10 @@
 #include<iostream>
 #include"Application.h"
 int main() {
-    Application app;
-    app.run();
+    Application app({"English-version.txt","Chinese-version.txt"});
+    app.load_all_dict();
+
+
+
+
 }
